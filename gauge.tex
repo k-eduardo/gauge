@@ -1,0 +1,98 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage{lalo}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+
+\begin{document}
+\title{Electromagnetism from the classical hamiltonian that is analogue from the quantum description of a gauge invariant wave function}
+\author{}
+\maketitle
+
+We're going to find how we should transform the free particule Schrödinger's equation $\hat{H}\psi = i\hbar\partt\psi$, so that $\psi'\eil\psi$ (a first order gauge transformation FOGT) is also solution for $\Lambda = \Lambda(\bm{x},t)$.\footnote{This may be considered as the generalization of the Schrödinger's solution invariance by the multiplication of a global phase.}
+
+In the position representation, Schrödinger's equation for the free particle is:
+\begin{equation}
+\hDm\partxx\psi = i\hbar\partt\psi
+\end{equation}
+
+To find how should we tranform the hamiltonian in order for $\psi'$ to be solution, then we could evaluate $\hat{H}\psi' = i\hbar\partt\psi'$, that is, $\frac{\hat{p}^2}{2m}\psi' = i\hbar\partt\psi'$. This is done below:
+\begin{dmath*}
+{\hDm \partx\pco{\pc{\partx\psi + \p{\qhc\partx\Lambda}\psi}\eil} = i\hbar\pc{\qhc\p{\partt\Lambda}\psi + i\hbar\partt\psi}\eil} \\
+\hDm \pc{\partxx\psi + \p{\qhc\partxx\Lambda}\psi + \p{\qhc\partx\Lambda}\partx\psi + \p{\qhc\partx\Lambda}\partx\psi + \p{\qhc\partx\Lambda}^2\psi}\eil -\psi\eil\frac{q}{c}\partt\Lambda = i\hbar\partt\psi\eil\\
+{\frac{1}{2m}\pco{\p{-i\hbar\partx}^2 + \pc{\p{-i\hbar\partx}\QC\partx\Lambda} + 2\p{\QC\partx\Lambda}\p{-i\hbar\partx} + \p{\QC\partx\Lambda}^2}\psi  +\p{\QC\partt\Lambda}\psi = i\hbar\partt\psi.}
+\end{dmath*}
+This last expressión may be written as:
+\begin{dmath}
+\DM\pc{\p{\hat{p} + \QC\nabla \Lambda}^2 + \QC\partt\Lambda}\psi = i\hbar\partt\psi.
+\end{dmath}
+This equation doesn't have the same structure as the Schrödinger's equation for a free particle. (This upcomming argument is still weak, I may have to study more from Gauge theories.)
+We propose then a new hamiltonian whose structure can be preserved when we transform it ad hoc as to ensure that a FOGT on the solution of the non transformed hamiltonian is a solution the the transfomed hamiltonian.\footnote{You'll se why I consider this a weak argument soon.} The idea behind this proposition is to introduce in the hamiltonian new elements, and that these elements represent fundamental interactions. We may have had actualy began with no potential at all, what is necessary is the canonical relation $[x,p] = i\hbar$ and the structure of the rule for state evolution of the free particle $\p{\hat{T} - i\hbar\partt}|\psi\rangle = 0$.
+
+So, as a personal (and of course novice) belief, the idea behind the formulation of physics in terms of gauge transformations is to introduce terms in the hamiltonian of the free particle by demanding that its structure remains the same when transformed as described in the previous paragraph. Naturally, all the characteristics from the term introduced on the hamiltonian should behave as the fundamental interaction the represent (being a part of the hamiltonian).
+
+So, after these digresions, let us continue. We are going then to propose that the hamiltonian of the system is
+\begin{equation}
+\hat{H} = \DM\p{\hat{p}-\QC A}^2 + q\phi ,
+\end{equation}
+and that the rules for its transformation are
+\begin{equation}
+A\to A + \nabla\Lambda,\lsep{1}{}\phi \to \phi - \frac{1}{c}\partt\phi.
+\end{equation}
+Another way to say the latter is that, given that $\psi$ satisfies
+\begin{equation}
+\DM\p{\hat{p}-\QC {A}}^2\psi + q{\phi}\psi = i\hbar\partt\psi, \lsep{2.15}{that is,}\hat{H}\psi = i\hbar\partt\psi;
+\end{equation}
+then $\eil\psi$ satisfies
+\begin{equation}
+\DM\pc{\hat{p}-\QC \p{A + \nabla\Lambda}}^2\psi' + q\p{\phi - \frac{1}{c}\partt\Lambda}\psi' = i\hbar\partt\psi',\lsep{1}{or}\hat{H}'\psi' = i\hbar\partt\psi'.
+\end{equation}
+This is how we guarantee that both equations are describing the same thing.\\
+
+Let us take this hamiltonian to classical mechanics. Hamilton's equations give us the following information:
+\begin{dgroup}
+\begin{dmath}
+{\doxi = \partpi H = \frac{1}{m}\p{p_i-\QC A_i}} \label{1}
+\end{dmath}
+\begin{dmath}
+{\dopi = -\partxi H = \frac{1}{m}\p{p_j-\QC A_j}\QC\partxi A_j -q\partxi\phi}\label{2}
+\end{dmath}
+\end{dgroup}
+From these equations, we can write
+\begin{dmath}
+m\ddot{x}_i =  q\p{-\partxi\phi - \frac{1}{c}\partt A_i} + \frac{1}{m}\p{p_j-\QC A_j}\QC\partxi A_j - \QC \doxj\partxj A_i\\
+= q\pc{\p{-\partxi\phi - \frac{1}{c}\partt A_i} + \frac{\doxj}{c}\p{\partxi A_j -\partxj A_i}}
+= q\pc{\p{-\partxi\phi - \frac{1}{c}\partt A_i} + \frac{\doxj}{c}\p{\D{il}\D{jm}-\D{im}\D{jl}}\p{\doxj\partial_{x_l}A_m}}
+= q\pc{\p{-\partxi\phi - \frac{1}{c}\partt A_i} + \frac{1}{c}\eijk\eklm \doxj \partial_{x_l}A_m}.
+\end{dmath}
+
+If we define $E=-\nabla\phi - \frac{1}{c}\partt A$ and $B = \nabla\times A$, then the later expression is the Lorentz force. We get two important equations out of the previous results:
+\begin{equation}
+\nabla\cdot B = 0,
+\end{equation}
+since $B$ is the curl of some vector function and
+\begin{equation}
+\curl E = -\frac{1}{c}\partt B.
+\end{equation}
+This last expression follows from the fact that $\nabla \phi$ is irrotational for any scalar field $\phi$. Note that these are two of Maxwell's equations, the ones that do not involve sources. In order to derive the other two equations, we must invent something that creates fields and impose a continuity equation.
+
+Well then, lets say that $B$ and $E$ have energy. One could ask for its conservation, this is a common mechanism in physics. Lets say that $S=\alpha S\times E$ gives the energy flux and $u = \beta E^2 + \gamma B^2 + \delta E\cdot B$.\footnote{It should be noted that a quadratic form on the energy is asumed. This is not justified.} Conservation of energy should be written as:
+\begin{equation}
+\nabla\cdot S - \partt u = \text{source of energy}\label{energy}
+\end{equation}
+Let us compute the amount of energy that can be done with the Lorentz force:
+\begin{equation}
+W =  F\cdot dl = q E\cdot dl.
+\end{equation}
+The force per unit volume due to this symmetry is:
+\begin{equation}
+f = \rho E + \frac{1}{c}j\times B,
+\end{equation}
+where $j=\rho v$. (We treat the case of only one species of particles, but the generalization shouldn't be a problem.)
+The amount of energy transfered to the fields by this mechanism should be:
+\begin{equation}
+-f\cdot v = -\rho E\cdot v = -j\cdot E.
+\end{equation}
+Equation \eqref{energy} is then:
+\begin{equation}
+\nabla \cdot S - \partt u = -j\cdot E.
+\end{equation}
+\end{document}
